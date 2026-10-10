@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Collaborative Intelligence</title>
+<meta name="description" content="A benchmark of how well AI models work as teammates: seven dimensions of teamwork, 210 scenarios grounded in real sources, eight frontier and open-weight models.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="icon" type="image/svg+xml" href="assets/logo.svg">
+<link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<link rel="stylesheet" href="css/site.css">
+</head>
+<body>
+<a class="skip" href="#leaderboard">Skip to the leaderboard</a>
+
+<header class="topbar">
+  <nav class="nav" aria-label="Sections">
+    <a class="brand" href="#top"><svg class="brand-mark" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="7.0" y="20.0" width="22.0" height="20.0" rx="6.6" fill="currentColor" stroke="#fff" stroke-width="2.5"/><circle cx="13.6" cy="30.0" r="2.0" fill="#fff"/><circle cx="22.4" cy="30.0" r="2.0" fill="#fff"/><rect x="35.0" y="20.0" width="22.0" height="20.0" rx="6.6" fill="currentColor" stroke="#fff" stroke-width="2.5"/><circle cx="41.6" cy="30.0" r="2.0" fill="#fff"/><circle cx="50.4" cy="30.0" r="2.0" fill="#fff"/><line x1="32.0" y1="27.0" x2="32.0" y2="22.0" stroke="#2457d6" stroke-width="2.4" stroke-linecap="round"/><circle cx="32.0" cy="21.0" r="2.3" fill="#2457d6"/><rect x="20.0" y="27.0" width="24.0" height="22.0" rx="7.2" fill="#2457d6" stroke="#fff" stroke-width="2.5"/><circle cx="27.2" cy="38.0" r="2.2" fill="#fff"/><circle cx="36.8" cy="38.0" r="2.2" fill="#fff"/></svg>Collaborative Intelligence</a>
+    <button class="nav-toggle" aria-expanded="false" aria-controls="nav-links" aria-label="Menu"><span></span><span></span><span></span></button>
+    <ul id="nav-links" class="nav-links">
+      <li><a href="#leaderboard">Leaderboard</a></li>
+      <li><a href="#examples">Examples</a></li>
+      <li><a href="#findings">Findings</a></li>
+      <li><a href="#cite">Cite</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main id="top">
+
+<section class="hero" aria-labelledby="hero-title">
+  <div class="wrap">
+    <svg class="hero-logo" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect x="7.0" y="20.0" width="22.0" height="20.0" rx="6.6" fill="currentColor" stroke="#fff" stroke-width="2.5"/><circle cx="13.6" cy="30.0" r="2.0" fill="#fff"/><circle cx="22.4" cy="30.0" r="2.0" fill="#fff"/><rect x="35.0" y="20.0" width="22.0" height="20.0" rx="6.6" fill="currentColor" stroke="#fff" stroke-width="2.5"/><circle cx="41.6" cy="30.0" r="2.0" fill="#fff"/><circle cx="50.4" cy="30.0" r="2.0" fill="#fff"/><line x1="32.0" y1="27.0" x2="32.0" y2="22.0" stroke="#2457d6" stroke-width="2.4" stroke-linecap="round"/><circle cx="32.0" cy="21.0" r="2.3" fill="#2457d6"/><rect x="20.0" y="27.0" width="24.0" height="22.0" rx="7.2" fill="#2457d6" stroke="#fff" stroke-width="2.5"/><circle cx="27.2" cy="38.0" r="2.2" fill="#fff"/><circle cx="36.8" cy="38.0" r="2.2" fill="#fff"/></svg>
+    <h1 id="hero-title">Collaborative Intelligence</h1>
+    <p class="tagline">How good are AI agents as teammates?</p>
+    <p class="authors"><a href="https://seannwu.github.io/" target="_blank" rel="noopener">Sean Wu</a><sup>1</sup> · <a href="https://aneeshpappu.com/" target="_blank" rel="noopener">Aneesh Pappu</a><sup>1</sup> · <a href="https://www.linkedin.com/in/jiaruzou" target="_blank" rel="noopener">Jiaru Zou</a><sup>1</sup> · <a href="https://www.linkedin.com/in/yuncong-toby-mao" target="_blank" rel="noopener">Yuncong Mao</a><sup>1</sup><br><a href="https://www.zhouhongjian.com/" target="_blank" rel="noopener">Hongjian Zhou</a><sup>2</sup> · <a href="https://samyu0304.github.io/" target="_blank" rel="noopener">Junchi Yu</a><sup>2</sup> · <a href="https://beckschen.github.io/" target="_blank" rel="noopener">Jieneng Chen</a><sup>1</sup> · <a href="https://www.james-zou.com/" target="_blank" rel="noopener">James Zou</a><sup>1</sup></p>
+    <div class="affils" aria-label="Affiliations">
+      <div class="affil"><sup>1</sup><img src="assets/logos/stanford.svg" alt="Stanford University" class="affil-logo stanford"></div>
+      <div class="affil"><sup>2</sup><img src="assets/logos/oxford.svg" alt="University of Oxford" class="affil-logo oxford"></div>
+    </div>
+    <div class="hero-links">
+      <a class="btn" href="#" data-placeholder="paper"><img src="assets/logos/arxiv.svg" alt="" class="btn-logo arxiv">Paper</a>
+      <a class="btn" href="#" data-placeholder="code"><img src="assets/logos/github.svg" alt="" class="btn-logo">Code</a>
+      <a class="btn" href="#" data-placeholder="dataset"><img src="assets/logos/huggingface.svg" alt="" class="btn-logo">Dataset</a>
+    </div>
+    <div class="abstract" id="abstract"><h2 class="abs-title">Abstract</h2><p id="abstract-text"></p></div>
+  </div>
+</section>
+
+<section id="leaderboard" class="section" aria-labelledby="lb-title">
+  <div class="wrap">
+    <h2 class="centered" id="lb-title">Leaderboard</h2>
+    
+    <div class="lb-layout">
+    <div class="lb-text"><p class="fineprint" id="lb-fineprint"></p></div>
+    <div class="lb-main">
+    <div class="controls" role="group" aria-label="Leaderboard controls">
+      <div class="seg" role="group" aria-label="Filter models">
+        <button type="button" data-filter="all" aria-pressed="true">All models</button>
+        <button type="button" data-filter="frontier" aria-pressed="false">Frontier</button>
+        <button type="button" data-filter="open" aria-pressed="false">Open weights</button>
+      </div>
+      <div class="seg" role="group" aria-label="View">
+        <button type="button" data-view="table" aria-pressed="true">Table</button>
+        <button type="button" data-view="spider" aria-pressed="false">Spider charts</button>
+      </div>
+    </div>
+    <div id="lb-table" class="lb-table-wrap"></div>
+    <div id="lb-spider" class="spiders" hidden></div>
+    </div>
+    </div>
+  </div>
+</section>
+
+<section id="dimensions" class="section" aria-labelledby="dims-title">
+  <div class="wrap">
+    <h2 class="centered" id="dims-title">Seven dimensions of teamwork</h2>
+    <div id="dim-cards" class="dims"></div>
+  </div>
+</section>
+
+<section id="how" class="section" aria-labelledby="how-title">
+  <div class="wrap">
+    <h2 class="centered" id="how-title">How it works</h2>
+    <div id="how-stage" class="how-stage"></div>
+    <p class="fineprint centered" id="how-judges"></p>
+  </div>
+</section>
+
+<section id="examples" class="section" aria-labelledby="ex-title">
+  <div class="wrap">
+    <h2 class="centered" id="ex-title">Examples</h2>
+    <p class="lede centered">Real runs, verbatim.</p>
+    <div id="ex-dims" class="ex-tabs" role="tablist" aria-label="Dimension"></div>
+    <div id="ex-list" class="ex-sub" role="tablist" aria-label="Example"></div>
+    <article id="ex-card" class="example"></article>
+  </div>
+</section>
+
+<section id="findings" class="section" aria-labelledby="find-title">
+  <div class="wrap">
+    <h2 class="centered" id="find-title">Findings</h2>
+    <div id="finding-list" class="findings"></div>
+  </div>
+</section>
+
+<section id="dataset" class="section" aria-labelledby="data-title">
+  <div class="wrap">
+    <h2 class="centered" id="data-title">The dataset</h2>
+    <p class="lede centered" id="data-lede"></p>
+    <div class="data-grid">
+      <div><h3>Where the scenarios come from</h3><div id="data-sources"></div></div>
+      <div><h3>How each one was validated</h3><ol id="data-validation" class="steps icons"></ol></div>
+    </div>
+    <details class="more"><summary>Licences</summary><p id="data-licence-text"></p><div id="data-licence"></div></details>
+  </div>
+</section>
+
+<section id="cite" class="section" aria-labelledby="cite-title">
+  <div class="wrap">
+    <h2 class="centered" id="cite-title">Citation</h2>
+    <div class="bib">
+      <pre id="bibtex" tabindex="0">@misc{collaborativeintelligence2026,
+  title        = {Collaborative Intelligence: Measuring AI Agents as Teammates},
+  author       = {Wu, Sean and Pappu, Aneesh and Zou, Jiaru and Mao, Yuncong and Zhou, Hongjian and Yu, Junchi and Chen, Jieneng and Zou, James},
+  year         = {2026},
+  howpublished = {PLACEHOLDER: preprint or venue},
+  url          = {https://seanwu25.github.io/collaborative-intelligence-site/}
+}</pre>
+      <button type="button" class="btn copy" id="copy-bib">Copy BibTeX</button>
+    </div>
+    <p class="fineprint">Contact: <a href="#" data-placeholder="contact">placeholder email</a>.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>Collaborative Intelligence. Code under the MIT licence. Company logos belong to their owners and identify the maker of each model only.</p>
+    <p class="muted" id="footer-generated"></p>
+  </div>
+</footer>
+
+<div id="tooltip" class="tooltip" role="tooltip" hidden></div>
+<script src="js/site.js"></script>
+</body>
+</html>

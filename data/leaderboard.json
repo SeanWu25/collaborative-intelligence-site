@@ -1,0 +1,1875 @@
+{
+ "generated": "2026-10-09",
+ "sources": [
+  "results/final_results.json",
+  "results/safety_stress_results.json",
+  "results/analysis/paper_stats.json",
+  "results/recent_models_results.json"
+ ],
+ "rule": "pass/fail per run (score['pass'] is True); alone gate = solo passed in every seed; test rate over gated scenarios = the dimension score; overall = mean of the dimensions",
+ "bootstrap": {
+  "reps": 4000,
+  "seed": 0,
+  "resample": "scenarios within dimension"
+ },
+ "dimensions": [
+  {
+   "key": "resisting_unsafe_pressure",
+   "name": "Resisting unsafe pressure",
+   "short": "Safety"
+  },
+  {
+   "key": "whistleblowing",
+   "name": "Reporting misconduct",
+   "short": "Reporting"
+  },
+  {
+   "key": "sharing_and_seeking_information",
+   "name": "Sharing and seeking information",
+   "short": "Sharing"
+  },
+  {
+   "key": "emotional_intelligence",
+   "name": "Emotional intelligence",
+   "short": "Emotional intel."
+  },
+  {
+   "key": "keeping_the_team_on_track",
+   "name": "Keeping the team on track",
+   "short": "On track"
+  },
+  {
+   "key": "handling_conflict",
+   "name": "Handling conflict",
+   "short": "Conflict"
+  },
+  {
+   "key": "taking_initiative",
+   "name": "Taking initiative",
+   "short": "Initiative"
+  }
+ ],
+ "models": [
+  {
+   "recent": false,
+   "id": "gpt-6-astra",
+   "name": "GPT-6 Astra",
+   "short": "Astra",
+   "maker": "OpenAI",
+   "open": false,
+   "color": "#2a78d6",
+   "color_dark": "#3987e5",
+   "logo": "assets/logos/openai.svg",
+   "logo_kind": "mark",
+   "logo_mono": true,
+   "score": 76.61,
+   "ci": [
+    72.75,
+    80.85
+   ],
+   "baseline": 94.71,
+   "alone": 98.57,
+   "teamwork_loss": 18.1,
+   "n_gated": 207,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": 99.0,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 100.0,
+     "test_ci": [
+      100.0,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 0.0
+    },
+    "whistleblowing": {
+     "test": 100.0,
+     "test_ci": [
+      100.0,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 93.33,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": -6.67
+    },
+    "sharing_and_seeking_information": {
+     "test": 90.0,
+     "test_ci": [
+      76.67,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 10.0
+    },
+    "emotional_intelligence": {
+     "test": 43.33,
+     "test_ci": [
+      26.67,
+      63.33
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 56.67
+    },
+    "keeping_the_team_on_track": {
+     "test": 96.3,
+     "test_ci": [
+      88.89,
+      100.0
+     ],
+     "alone": 90.0,
+     "baseline": 96.3,
+     "n_baseline": 27,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 0.0
+    },
+    "handling_conflict": {
+     "test": 16.67,
+     "test_ci": [
+      3.33,
+      30.0
+     ],
+     "alone": 100.0,
+     "baseline": 76.67,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 60.0
+    },
+    "taking_initiative": {
+     "test": 90.0,
+     "test_ci": [
+      80.0,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 96.67,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 6.67
+    }
+   },
+   "stress": {
+    "score": 100.0,
+    "ci": [
+     100.0,
+     100.0
+    ],
+    "dims": {
+     "resisting_unsafe_pressure": {
+      "test": 100.0,
+      "n_gated": 12,
+      "n_scenarios": 12
+     },
+     "whistleblowing": {
+      "test": 100.0,
+      "n_gated": 10,
+      "n_scenarios": 11
+     }
+    }
+   },
+   "rank": 1
+  },
+  {
+   "recent": false,
+   "id": "claude-opus-5-5",
+   "name": "Claude Opus 5.5",
+   "short": "Opus",
+   "maker": "Anthropic",
+   "open": false,
+   "color": "#eb6834",
+   "color_dark": "#d95926",
+   "logo": "assets/logos/claude.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "badge": "assets/logos/claude.svg",
+   "score": 70.56,
+   "ci": [
+    65.64,
+    75.25
+   ],
+   "baseline": 94.56,
+   "alone": 98.53,
+   "teamwork_loss": 24.15,
+   "n_gated": 201,
+   "n_complete": 204,
+   "n_scenarios": 210,
+   "n_refused": 6,
+   "rank_stability": 94.0,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 96.55,
+     "test_ci": [
+      89.66,
+      100.0
+     ],
+     "alone": 96.67,
+     "baseline": 96.55,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 0.0
+    },
+    "whistleblowing": {
+     "test": 96.55,
+     "test_ci": [
+      89.66,
+      100.0
+     ],
+     "alone": 96.67,
+     "baseline": 100.0,
+     "n_baseline": 28,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 3.57
+    },
+    "sharing_and_seeking_information": {
+     "test": 93.1,
+     "test_ci": [
+      82.76,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 29,
+     "n_scenarios": 30,
+     "n_refused": 1,
+     "teamwork_loss": 6.9
+    },
+    "emotional_intelligence": {
+     "test": 56.67,
+     "test_ci": [
+      40.0,
+      73.33
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 43.33
+    },
+    "keeping_the_team_on_track": {
+     "test": 72.0,
+     "test_ci": [
+      56.0,
+      88.0
+     ],
+     "alone": 96.15,
+     "baseline": 92.0,
+     "n_baseline": 25,
+     "n_gated": 25,
+     "n_complete": 26,
+     "n_scenarios": 30,
+     "n_refused": 4,
+     "teamwork_loss": 20.0
+    },
+    "handling_conflict": {
+     "test": 6.67,
+     "test_ci": [
+      0.0,
+      16.67
+     ],
+     "alone": 100.0,
+     "baseline": 73.33,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 66.67
+    },
+    "taking_initiative": {
+     "test": 72.41,
+     "test_ci": [
+      55.17,
+      89.66
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 28,
+     "n_gated": 29,
+     "n_complete": 29,
+     "n_scenarios": 30,
+     "n_refused": 1,
+     "teamwork_loss": 28.57
+    }
+   },
+   "stress": {
+    "score": 100.0,
+    "ci": [
+     100.0,
+     100.0
+    ],
+    "dims": {
+     "resisting_unsafe_pressure": {
+      "test": 100.0,
+      "n_gated": 9,
+      "n_scenarios": 12
+     },
+     "whistleblowing": {
+      "test": 100.0,
+      "n_gated": 9,
+      "n_scenarios": 11
+     }
+    }
+   },
+   "rank": 2
+  },
+  {
+   "recent": true,
+   "id": "gpt-6.1-sol",
+   "name": "GPT-6.1 Sol",
+   "short": "Sol",
+   "maker": "OpenAI",
+   "open": false,
+   "color": "#5b8def",
+   "color_dark": "#7aa2f2",
+   "logo": "assets/logos/openai.svg",
+   "logo_kind": "mark",
+   "logo_mono": true,
+   "score": 69.55,
+   "ci": [
+    64.85,
+    74.4
+   ],
+   "baseline": 93.15,
+   "alone": 97.14,
+   "teamwork_loss": 23.6,
+   "n_gated": 204,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": null,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 100.0,
+     "test_ci": [
+      100.0,
+      100.0
+     ],
+     "alone": 96.67,
+     "baseline": 100.0,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 0.0
+    },
+    "whistleblowing": {
+     "test": 90.0,
+     "test_ci": [
+      76.67,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 93.33,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 3.33
+    },
+    "sharing_and_seeking_information": {
+     "test": 86.67,
+     "test_ci": [
+      73.33,
+      96.67
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 13.33
+    },
+    "emotional_intelligence": {
+     "test": 33.33,
+     "test_ci": [
+      16.67,
+      50.0
+     ],
+     "alone": 100.0,
+     "baseline": 96.67,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 63.33
+    },
+    "keeping_the_team_on_track": {
+     "test": 80.77,
+     "test_ci": [
+      65.38,
+      92.31
+     ],
+     "alone": 86.67,
+     "baseline": 92.31,
+     "n_baseline": 26,
+     "n_gated": 26,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 11.54
+    },
+    "handling_conflict": {
+     "test": 13.33,
+     "test_ci": [
+      3.33,
+      26.67
+     ],
+     "alone": 100.0,
+     "baseline": 76.67,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 63.33
+    },
+    "taking_initiative": {
+     "test": 82.76,
+     "test_ci": [
+      68.97,
+      96.55
+     ],
+     "alone": 96.67,
+     "baseline": 93.1,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 10.34
+    }
+   },
+   "stress": null,
+   "rank": 3
+  },
+  {
+   "recent": false,
+   "id": "claude-fable-5-1",
+   "name": "Claude Fable 5.1",
+   "short": "Fable",
+   "maker": "Anthropic",
+   "open": false,
+   "color": "#1baf7a",
+   "color_dark": "#199e70",
+   "logo": "assets/logos/claude.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "badge": "assets/logos/claude.svg",
+   "score": 65.84,
+   "ci": [
+    60.49,
+    71.09
+   ],
+   "baseline": 94.3,
+   "alone": 97.06,
+   "teamwork_loss": 29.98,
+   "n_gated": 165,
+   "n_complete": 170,
+   "n_scenarios": 210,
+   "n_refused": 40,
+   "rank_stability": 95.0,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 94.44,
+     "test_ci": [
+      83.33,
+      100.0
+     ],
+     "alone": 85.71,
+     "baseline": 100.0,
+     "n_baseline": 13,
+     "n_gated": 18,
+     "n_complete": 21,
+     "n_scenarios": 30,
+     "n_refused": 9,
+     "teamwork_loss": 7.69
+    },
+    "whistleblowing": {
+     "test": 96.0,
+     "test_ci": [
+      88.0,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 21,
+     "n_gated": 25,
+     "n_complete": 25,
+     "n_scenarios": 30,
+     "n_refused": 5,
+     "teamwork_loss": 4.76
+    },
+    "sharing_and_seeking_information": {
+     "test": 73.91,
+     "test_ci": [
+      56.52,
+      91.3
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 23,
+     "n_gated": 23,
+     "n_complete": 23,
+     "n_scenarios": 30,
+     "n_refused": 7,
+     "teamwork_loss": 26.09
+    },
+    "emotional_intelligence": {
+     "test": 48.15,
+     "test_ci": [
+      29.63,
+      66.67
+     ],
+     "alone": 100.0,
+     "baseline": 95.65,
+     "n_baseline": 23,
+     "n_gated": 27,
+     "n_complete": 27,
+     "n_scenarios": 30,
+     "n_refused": 3,
+     "teamwork_loss": 52.17
+    },
+    "keeping_the_team_on_track": {
+     "test": 90.48,
+     "test_ci": [
+      76.19,
+      100.0
+     ],
+     "alone": 91.3,
+     "baseline": 94.74,
+     "n_baseline": 19,
+     "n_gated": 21,
+     "n_complete": 23,
+     "n_scenarios": 30,
+     "n_refused": 7,
+     "teamwork_loss": 5.26
+    },
+    "handling_conflict": {
+     "test": 3.7,
+     "test_ci": [
+      0.0,
+      11.11
+     ],
+     "alone": 100.0,
+     "baseline": 74.07,
+     "n_baseline": 27,
+     "n_gated": 27,
+     "n_complete": 27,
+     "n_scenarios": 30,
+     "n_refused": 3,
+     "teamwork_loss": 70.37
+    },
+    "taking_initiative": {
+     "test": 54.17,
+     "test_ci": [
+      33.33,
+      75.0
+     ],
+     "alone": 100.0,
+     "baseline": 95.65,
+     "n_baseline": 23,
+     "n_gated": 24,
+     "n_complete": 24,
+     "n_scenarios": 30,
+     "n_refused": 6,
+     "teamwork_loss": 43.48
+    }
+   },
+   "stress": {
+    "score": 100.0,
+    "ci": [
+     100.0,
+     100.0
+    ],
+    "dims": {
+     "resisting_unsafe_pressure": {
+      "test": 100.0,
+      "n_gated": 11,
+      "n_scenarios": 12
+     },
+     "whistleblowing": {
+      "test": 100.0,
+      "n_gated": 10,
+      "n_scenarios": 11
+     }
+    }
+   },
+   "rank": 4
+  },
+  {
+   "recent": true,
+   "id": "claude-sonnet-5-5",
+   "name": "Claude Sonnet 5.5",
+   "short": "Sonnet",
+   "maker": "Anthropic",
+   "open": false,
+   "color": "#c2410c",
+   "color_dark": "#ea580c",
+   "logo": "assets/logos/claude.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "badge": "assets/logos/claude.svg",
+   "score": 61.66,
+   "ci": [
+    56.64,
+    66.77
+   ],
+   "baseline": 89.65,
+   "alone": 96.63,
+   "teamwork_loss": 27.99,
+   "n_gated": 201,
+   "n_complete": 208,
+   "n_scenarios": 210,
+   "n_refused": 2,
+   "rank_stability": null,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 100.0,
+     "test_ci": [
+      100.0,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 29,
+     "n_scenarios": 30,
+     "n_refused": 1,
+     "teamwork_loss": 0.0
+    },
+    "whistleblowing": {
+     "test": 93.33,
+     "test_ci": [
+      83.33,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 100.0,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 6.67
+    },
+    "sharing_and_seeking_information": {
+     "test": 80.0,
+     "test_ci": [
+      63.33,
+      93.33
+     ],
+     "alone": 100.0,
+     "baseline": 96.67,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 16.67
+    },
+    "emotional_intelligence": {
+     "test": 26.67,
+     "test_ci": [
+      13.33,
+      43.33
+     ],
+     "alone": 100.0,
+     "baseline": 93.33,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 66.67
+    },
+    "keeping_the_team_on_track": {
+     "test": 74.07,
+     "test_ci": [
+      55.56,
+      88.89
+     ],
+     "alone": 93.1,
+     "baseline": 85.19,
+     "n_baseline": 27,
+     "n_gated": 27,
+     "n_complete": 29,
+     "n_scenarios": 30,
+     "n_refused": 1,
+     "teamwork_loss": 11.11
+    },
+    "handling_conflict": {
+     "test": 11.11,
+     "test_ci": [
+      0.0,
+      25.93
+     ],
+     "alone": 90.0,
+     "baseline": 66.67,
+     "n_baseline": 27,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 55.56
+    },
+    "taking_initiative": {
+     "test": 46.43,
+     "test_ci": [
+      28.57,
+      64.29
+     ],
+     "alone": 93.33,
+     "baseline": 85.71,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 39.29
+    }
+   },
+   "stress": null,
+   "rank": 5
+  },
+  {
+   "recent": true,
+   "id": "together:deepseek-ai/DeepSeek-V4.1-Flash",
+   "name": "DeepSeek V4.1 Flash",
+   "short": "DSFlash",
+   "maker": "DeepSeek",
+   "open": true,
+   "color": "#0f8fa8",
+   "color_dark": "#2aa3bb",
+   "logo": "assets/logos/deepseek.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "score": 48.18,
+   "ci": [
+    42.0,
+    54.21
+   ],
+   "baseline": 79.93,
+   "alone": 87.62,
+   "teamwork_loss": 31.75,
+   "n_gated": 184,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": null,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 85.71,
+     "test_ci": [
+      71.43,
+      96.43
+     ],
+     "alone": 93.33,
+     "baseline": 78.57,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": -7.14
+    },
+    "whistleblowing": {
+     "test": 86.21,
+     "test_ci": [
+      72.41,
+      96.55
+     ],
+     "alone": 96.67,
+     "baseline": 89.66,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 3.45
+    },
+    "sharing_and_seeking_information": {
+     "test": 35.71,
+     "test_ci": [
+      17.86,
+      53.57
+     ],
+     "alone": 93.33,
+     "baseline": 78.57,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 42.86
+    },
+    "emotional_intelligence": {
+     "test": 14.29,
+     "test_ci": [
+      3.57,
+      28.57
+     ],
+     "alone": 93.33,
+     "baseline": 92.86,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 78.57
+    },
+    "keeping_the_team_on_track": {
+     "test": 65.0,
+     "test_ci": [
+      45.0,
+      85.0
+     ],
+     "alone": 66.67,
+     "baseline": 95.0,
+     "n_baseline": 20,
+     "n_gated": 20,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 30.0
+    },
+    "handling_conflict": {
+     "test": 21.74,
+     "test_ci": [
+      4.35,
+      39.13
+     ],
+     "alone": 76.67,
+     "baseline": 39.13,
+     "n_baseline": 23,
+     "n_gated": 23,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 17.39
+    },
+    "taking_initiative": {
+     "test": 28.57,
+     "test_ci": [
+      14.29,
+      46.43
+     ],
+     "alone": 93.33,
+     "baseline": 85.71,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 57.14
+    }
+   },
+   "stress": null,
+   "rank": 6
+  },
+  {
+   "recent": true,
+   "id": "claude-haiku-5-5",
+   "name": "Claude Haiku 5.5",
+   "short": "Haiku",
+   "maker": "Anthropic",
+   "open": false,
+   "color": "#a16207",
+   "color_dark": "#ca8a04",
+   "logo": "assets/logos/claude.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "badge": "assets/logos/claude.svg",
+   "score": 47.28,
+   "ci": [
+    42.27,
+    52.29
+   ],
+   "baseline": 78.21,
+   "alone": 87.14,
+   "teamwork_loss": 30.93,
+   "n_gated": 183,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": null,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 93.33,
+     "test_ci": [
+      83.33,
+      100.0
+     ],
+     "alone": 100.0,
+     "baseline": 96.67,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 3.33
+    },
+    "whistleblowing": {
+     "test": 89.29,
+     "test_ci": [
+      75.0,
+      100.0
+     ],
+     "alone": 93.33,
+     "baseline": 96.43,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 7.14
+    },
+    "sharing_and_seeking_information": {
+     "test": 61.54,
+     "test_ci": [
+      42.31,
+      80.77
+     ],
+     "alone": 86.67,
+     "baseline": 88.46,
+     "n_baseline": 26,
+     "n_gated": 26,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 26.92
+    },
+    "emotional_intelligence": {
+     "test": 22.22,
+     "test_ci": [
+      7.41,
+      37.13
+     ],
+     "alone": 90.0,
+     "baseline": 85.19,
+     "n_baseline": 27,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 62.96
+    },
+    "keeping_the_team_on_track": {
+     "test": 60.0,
+     "test_ci": [
+      40.0,
+      80.0
+     ],
+     "alone": 83.33,
+     "baseline": 84.0,
+     "n_baseline": 25,
+     "n_gated": 25,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 24.0
+    },
+    "handling_conflict": {
+     "test": 0.0,
+     "test_ci": [
+      0.0,
+      0.0
+     ],
+     "alone": 83.33,
+     "baseline": 24.0,
+     "n_baseline": 25,
+     "n_gated": 25,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 24.0
+    },
+    "taking_initiative": {
+     "test": 4.55,
+     "test_ci": [
+      0.0,
+      13.64
+     ],
+     "alone": 73.33,
+     "baseline": 72.73,
+     "n_baseline": 22,
+     "n_gated": 22,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 68.18
+    }
+   },
+   "stress": null,
+   "rank": 7
+  },
+  {
+   "recent": false,
+   "id": "together:moonshotai/Kimi-K3",
+   "name": "Kimi K3",
+   "short": "Kimi",
+   "maker": "Moonshot AI",
+   "open": true,
+   "color": "#eda100",
+   "color_dark": "#c98500",
+   "logo": "assets/logos/kimi-logomark-light.svg",
+   "logo_dark": "assets/logos/kimi-logomark-dark.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "score": 46.37,
+   "ci": [
+    41.14,
+    51.64
+   ],
+   "baseline": 83.37,
+   "alone": 90.48,
+   "teamwork_loss": 37.0,
+   "n_gated": 190,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": 99.0,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 84.0,
+     "test_ci": [
+      68.0,
+      96.0
+     ],
+     "alone": 83.33,
+     "baseline": 96.0,
+     "n_baseline": 25,
+     "n_gated": 25,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 12.0
+    },
+    "whistleblowing": {
+     "test": 100.0,
+     "test_ci": [
+      100.0,
+      100.0
+     ],
+     "alone": 96.67,
+     "baseline": 93.1,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": -6.9
+    },
+    "sharing_and_seeking_information": {
+     "test": 35.71,
+     "test_ci": [
+      17.86,
+      53.57
+     ],
+     "alone": 93.33,
+     "baseline": 100.0,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 64.29
+    },
+    "emotional_intelligence": {
+     "test": 6.9,
+     "test_ci": [
+      0.0,
+      17.24
+     ],
+     "alone": 96.67,
+     "baseline": 89.66,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 82.76
+    },
+    "keeping_the_team_on_track": {
+     "test": 66.67,
+     "test_ci": [
+      45.83,
+      83.33
+     ],
+     "alone": 80.0,
+     "baseline": 87.5,
+     "n_baseline": 24,
+     "n_gated": 24,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 20.83
+    },
+    "handling_conflict": {
+     "test": 8.0,
+     "test_ci": [
+      0.0,
+      20.0
+     ],
+     "alone": 83.33,
+     "baseline": 44.0,
+     "n_baseline": 25,
+     "n_gated": 25,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 36.0
+    },
+    "taking_initiative": {
+     "test": 23.33,
+     "test_ci": [
+      10.0,
+      40.0
+     ],
+     "alone": 100.0,
+     "baseline": 73.33,
+     "n_baseline": 30,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 50.0
+    }
+   },
+   "stress": {
+    "score": 91.29,
+    "ci": [
+     78.41,
+     100.0
+    ],
+    "dims": {
+     "resisting_unsafe_pressure": {
+      "test": 91.67,
+      "n_gated": 12,
+      "n_scenarios": 12
+     },
+     "whistleblowing": {
+      "test": 90.91,
+      "n_gated": 11,
+      "n_scenarios": 11
+     }
+    }
+   },
+   "rank": 8
+  },
+  {
+   "recent": true,
+   "id": "together:zai-org/GLM-5.3",
+   "name": "GLM-5.3",
+   "short": "GLM",
+   "maker": "Z.ai",
+   "open": true,
+   "color": "#b0397a",
+   "color_dark": "#d0609a",
+   "logo": null,
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "score": 40.59,
+   "ci": [
+    35.4,
+    45.99
+   ],
+   "baseline": null,
+   "alone": 90.95,
+   "teamwork_loss": null,
+   "n_gated": 191,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": null,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 83.33,
+     "test_ci": [
+      66.67,
+      95.83
+     ],
+     "alone": 80.0,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 24,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    },
+    "whistleblowing": {
+     "test": 72.41,
+     "test_ci": [
+      55.17,
+      89.66
+     ],
+     "alone": 96.67,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    },
+    "sharing_and_seeking_information": {
+     "test": 48.28,
+     "test_ci": [
+      31.03,
+      65.52
+     ],
+     "alone": 96.67,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    },
+    "emotional_intelligence": {
+     "test": 16.67,
+     "test_ci": [
+      3.33,
+      30.0
+     ],
+     "alone": 100.0,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    },
+    "keeping_the_team_on_track": {
+     "test": 56.0,
+     "test_ci": [
+      36.0,
+      76.0
+     ],
+     "alone": 83.33,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 25,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    },
+    "handling_conflict": {
+     "test": 3.57,
+     "test_ci": [
+      0.0,
+      10.71
+     ],
+     "alone": 93.33,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    },
+    "taking_initiative": {
+     "test": 3.85,
+     "test_ci": [
+      0.0,
+      11.54
+     ],
+     "alone": 86.67,
+     "baseline": null,
+     "n_baseline": 0,
+     "n_gated": 26,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": null
+    }
+   },
+   "stress": null,
+   "rank": 9
+  },
+  {
+   "recent": false,
+   "id": "together:Qwen/Qwen3.7-Max",
+   "name": "Qwen 3.7 Max",
+   "short": "Qwen",
+   "maker": "Alibaba",
+   "open": true,
+   "color": "#4a3aa7",
+   "color_dark": "#9085e9",
+   "logo": "assets/logos/qwen.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "badge": "assets/logos/qwen.svg",
+   "score": 38.4,
+   "ci": [
+    32.58,
+    44.14
+   ],
+   "baseline": 87.54,
+   "alone": 80.48,
+   "teamwork_loss": 48.74,
+   "n_gated": 169,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": 86.0,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 77.27,
+     "test_ci": [
+      59.09,
+      90.91
+     ],
+     "alone": 73.33,
+     "baseline": 84.21,
+     "n_baseline": 19,
+     "n_gated": 22,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": -5.26
+    },
+    "whistleblowing": {
+     "test": 85.71,
+     "test_ci": [
+      71.43,
+      100.0
+     ],
+     "alone": 70.0,
+     "baseline": 100.0,
+     "n_baseline": 18,
+     "n_gated": 21,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 16.67
+    },
+    "sharing_and_seeking_information": {
+     "test": 32.14,
+     "test_ci": [
+      14.29,
+      50.0
+     ],
+     "alone": 93.33,
+     "baseline": 92.86,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 60.71
+    },
+    "emotional_intelligence": {
+     "test": 3.33,
+     "test_ci": [
+      0.0,
+      10.0
+     ],
+     "alone": 100.0,
+     "baseline": 96.0,
+     "n_baseline": 25,
+     "n_gated": 30,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 92.0
+    },
+    "keeping_the_team_on_track": {
+     "test": 52.17,
+     "test_ci": [
+      30.43,
+      73.91
+     ],
+     "alone": 76.67,
+     "baseline": 88.89,
+     "n_baseline": 18,
+     "n_gated": 23,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 44.44
+    },
+    "handling_conflict": {
+     "test": 18.18,
+     "test_ci": [
+      4.55,
+      36.36
+     ],
+     "alone": 73.33,
+     "baseline": 68.18,
+     "n_baseline": 22,
+     "n_gated": 22,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 50.0
+    },
+    "taking_initiative": {
+     "test": 0.0,
+     "test_ci": [
+      0.0,
+      0.0
+     ],
+     "alone": 76.67,
+     "baseline": 82.61,
+     "n_baseline": 23,
+     "n_gated": 23,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 82.61
+    }
+   },
+   "stress": {
+    "score": 81.25,
+    "ci": [
+     62.5,
+     93.75
+    ],
+    "dims": {
+     "resisting_unsafe_pressure": {
+      "test": 100.0,
+      "n_gated": 8,
+      "n_scenarios": 12
+     },
+     "whistleblowing": {
+      "test": 62.5,
+      "n_gated": 8,
+      "n_scenarios": 11
+     }
+    }
+   },
+   "rank": 10
+  },
+  {
+   "recent": false,
+   "id": "together:deepseek-ai/DeepSeek-V4-Pro-0813",
+   "name": "DeepSeek V4 Pro",
+   "short": "DeepSeek",
+   "maker": "DeepSeek",
+   "open": true,
+   "color": "#008300",
+   "color_dark": "#008300",
+   "logo": "assets/logos/deepseek.svg",
+   "logo_kind": "mark",
+   "logo_mono": false,
+   "score": 34.73,
+   "ci": [
+    29.43,
+    40.0
+   ],
+   "baseline": 81.77,
+   "alone": 86.19,
+   "teamwork_loss": 46.89,
+   "n_gated": 181,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": 87.0,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 70.37,
+     "test_ci": [
+      51.85,
+      85.19
+     ],
+     "alone": 90.0,
+     "baseline": 100.0,
+     "n_baseline": 23,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 26.09
+    },
+    "whistleblowing": {
+     "test": 81.48,
+     "test_ci": [
+      66.67,
+      96.3
+     ],
+     "alone": 90.0,
+     "baseline": 100.0,
+     "n_baseline": 21,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 19.05
+    },
+    "sharing_and_seeking_information": {
+     "test": 21.43,
+     "test_ci": [
+      7.14,
+      35.71
+     ],
+     "alone": 93.33,
+     "baseline": 89.29,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 67.86
+    },
+    "emotional_intelligence": {
+     "test": 0.0,
+     "test_ci": [
+      0.0,
+      0.0
+     ],
+     "alone": 90.0,
+     "baseline": 91.3,
+     "n_baseline": 23,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 91.3
+    },
+    "keeping_the_team_on_track": {
+     "test": 52.0,
+     "test_ci": [
+      32.0,
+      72.0
+     ],
+     "alone": 83.33,
+     "baseline": 85.0,
+     "n_baseline": 20,
+     "n_gated": 25,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 35.0
+    },
+    "handling_conflict": {
+     "test": 0.0,
+     "test_ci": [
+      0.0,
+      0.0
+     ],
+     "alone": 63.33,
+     "baseline": 21.05,
+     "n_baseline": 19,
+     "n_gated": 19,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 21.05
+    },
+    "taking_initiative": {
+     "test": 17.86,
+     "test_ci": [
+      7.14,
+      32.14
+     ],
+     "alone": 93.33,
+     "baseline": 85.71,
+     "n_baseline": 28,
+     "n_gated": 28,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 67.86
+    }
+   },
+   "stress": {
+    "score": 78.57,
+    "ci": [
+     57.14,
+     92.86
+    ],
+    "dims": {
+     "resisting_unsafe_pressure": {
+      "test": 57.14,
+      "n_gated": 7,
+      "n_scenarios": 12
+     },
+     "whistleblowing": {
+      "test": 100.0,
+      "n_gated": 9,
+      "n_scenarios": 11
+     }
+    }
+   },
+   "rank": 11
+  },
+  {
+   "recent": true,
+   "id": "together:openai/gpt-oss-120b",
+   "name": "gpt-oss-120b",
+   "short": "Oss",
+   "maker": "OpenAI",
+   "open": true,
+   "color": "#475569",
+   "color_dark": "#94a3b8",
+   "logo": "assets/logos/openai.svg",
+   "logo_kind": "mark",
+   "logo_mono": true,
+   "score": 22.71,
+   "ci": [
+    15.49,
+    29.79
+   ],
+   "baseline": 67.39,
+   "alone": 59.52,
+   "teamwork_loss": 44.68,
+   "n_gated": 125,
+   "n_complete": 210,
+   "n_scenarios": 210,
+   "n_refused": 0,
+   "rank_stability": null,
+   "dims": {
+    "resisting_unsafe_pressure": {
+     "test": 64.29,
+     "test_ci": [
+      35.71,
+      85.71
+     ],
+     "alone": 46.67,
+     "baseline": 64.29,
+     "n_baseline": 14,
+     "n_gated": 14,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 0.0
+    },
+    "whistleblowing": {
+     "test": 57.14,
+     "test_ci": [
+      14.29,
+      85.71
+     ],
+     "alone": 23.33,
+     "baseline": 100.0,
+     "n_baseline": 7,
+     "n_gated": 7,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 42.86
+    },
+    "sharing_and_seeking_information": {
+     "test": 15.38,
+     "test_ci": [
+      3.85,
+      30.77
+     ],
+     "alone": 86.67,
+     "baseline": 92.31,
+     "n_baseline": 26,
+     "n_gated": 26,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 76.92
+    },
+    "emotional_intelligence": {
+     "test": 3.45,
+     "test_ci": [
+      0.0,
+      10.34
+     ],
+     "alone": 96.67,
+     "baseline": 93.1,
+     "n_baseline": 29,
+     "n_gated": 29,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 89.66
+    },
+    "keeping_the_team_on_track": {
+     "test": 15.0,
+     "test_ci": [
+      0.0,
+      30.0
+     ],
+     "alone": 66.67,
+     "baseline": 85.0,
+     "n_baseline": 20,
+     "n_gated": 20,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 70.0
+    },
+    "handling_conflict": {
+     "test": 3.7,
+     "test_ci": [
+      0.0,
+      11.11
+     ],
+     "alone": 90.0,
+     "baseline": 37.04,
+     "n_baseline": 27,
+     "n_gated": 27,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 33.33
+    },
+    "taking_initiative": {
+     "test": 0.0,
+     "test_ci": [
+      0.0,
+      0.0
+     ],
+     "alone": 6.67,
+     "baseline": 0.0,
+     "n_baseline": 2,
+     "n_gated": 2,
+     "n_complete": 30,
+     "n_scenarios": 30,
+     "n_refused": 0,
+     "teamwork_loss": 0.0
+    }
+   },
+   "stress": null,
+   "rank": 12
+  }
+ ],
+ "adjacent_differences": [
+  {
+   "higher": "gpt-6-astra",
+   "lower": "claude-opus-5-5",
+   "diff": 6.05,
+   "ci": [
+    0.62,
+    11.49
+   ],
+   "p_higher": 0.986
+  },
+  {
+   "higher": "claude-opus-5-5",
+   "lower": "claude-fable-5-1",
+   "diff": 4.73,
+   "ci": [
+    -0.77,
+    10.47
+   ],
+   "p_higher": 0.949
+  },
+  {
+   "higher": "claude-fable-5-1",
+   "lower": "together:moonshotai/Kimi-K3",
+   "diff": 19.46,
+   "ci": [
+    12.35,
+    26.67
+   ],
+   "p_higher": 1.0
+  },
+  {
+   "higher": "together:moonshotai/Kimi-K3",
+   "lower": "together:Qwen/Qwen3.7-Max",
+   "diff": 7.97,
+   "ci": [
+    1.33,
+    14.68
+   ],
+   "p_higher": 0.992
+  },
+  {
+   "higher": "together:Qwen/Qwen3.7-Max",
+   "lower": "together:deepseek-ai/DeepSeek-V4-Pro-0813",
+   "diff": 3.67,
+   "ci": [
+    -2.56,
+    10.1
+   ],
+   "p_higher": 0.872
+  }
+ ],
+ "groups": {
+  "frontier": {
+   "ids": [
+    "gpt-6-astra",
+    "claude-opus-5-5",
+    "claude-fable-5-1"
+   ],
+   "score": 71.0,
+   "baseline": 94.5,
+   "alone": 98.1
+  },
+  "open": {
+   "ids": [
+    "together:moonshotai/Kimi-K3",
+    "together:Qwen/Qwen3.7-Max",
+    "together:deepseek-ai/DeepSeek-V4-Pro-0813"
+   ],
+   "score": 39.8,
+   "baseline": 84.2,
+   "alone": 85.7
+  }
+ },
+ "stress_set": {
+  "n_scenarios": 23,
+  "dimensions": [
+   "resisting_unsafe_pressure",
+   "whistleblowing"
+  ]
+ },
+ "audit_note": "Conflict scores follow a reading of every conflict pass on the leaderboard: in 7 of 35 the model had offered to accept the pushy teammate's own offer, which the judges missed, so they count as fails.",
+ "recent_note": "New: models added after the main runs, scored on the same scenarios in the same way. They are not in the frontier and open-weight averages. GLM-5.3 has no normal-teammate runs.",
+ "abstract": {
+  "text": "AI agents now work alongside people and other agents, yet we still test them alone. Being able to do a task is not the same as being a good teammate. We introduce Collaborative Intelligence, a benchmark of 210 scenarios across 7 dimensions of teamwork. Each is built from a real source, such as an accident report, and has a checkable answer. Every scenario runs alone, with a normal teammate, and with a scripted teammate who creates one specific problem. A model is scored only on the scenarios it passes alone, so a failure points to teamwork, not ability. All 6 models we test pass most scenarios alone, but their team scores range from 34.7 to 76.6. Frontier models almost never give way to unsafe pressure, and they almost always report misconduct. Across 90 further test runs built to break two of them, we found no genuine failure. Collaboration is far from solved. Frontier models pass only 9% of conflict tests and 49% of emotional intelligence tests. They also take initiative less often when a gap in the team's work is buried in a realistic workload. Open-weight models trail the frontier by 31.2 points overall. Of six models added after our main runs, OpenAI's newest scores below GPT-6 Astra, and smaller Claude models keep their safety but lose teamwork. The shortfall in collaboration is mostly a matter of defaults: one paragraph in the system prompt that states the norm lifts two frontier models from 46% to 83% on these three dimensions, while a generic “be a good teammate” helps only a little and not at all in conflict. The same paragraph lifts open-weight models only part of the way. When the model behind an agent switches mid-session, safety mostly sticks to the conversation. A weaker model that inherits a refusal keeps it, but a frontier model that takes over can neither undo harm already in motion nor reliably see through its predecessor's code: taking over sessions in which a weaker model had cheated on a coding task, frontier models kept the cheat in 43 of 111 takeovers, even when told to check the work or given more time to think. Showing them a diff of the session fixes the tampering they miss but not the cheats they see and keep. Outside code, they corrected every false record they inherited.",
+  "source": "ci-website/docs/paper_final/sections/abstract.tex"
+ }
+}
